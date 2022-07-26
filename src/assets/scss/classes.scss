@@ -1,0 +1,22 @@
+$spaceamounts: (5, 6, 7, 8, 9, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100);
+$sides: (top, bottom, left, right);
+
+@each $space in $spaceamounts {
+  @each $side in $sides {
+    .margin-#{$side}-#{$space} {
+      margin-#{$side}: #{$space}px !important;
+    }
+
+    .padding-#{$side}-#{$space} {
+      padding-#{$side}: #{$space}px !important;
+    }
+  }
+
+  .padding-#{$space} {
+    padding: #{$space}px !important;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
